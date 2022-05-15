@@ -1,4 +1,6 @@
-fn main() {}
+fn main() {
+    println!("{}", 50.0 / 4.0);
+}
 
 fn shark(
     pontoon_distance: f64,
@@ -7,7 +9,17 @@ fn shark(
     shark_speed: f64,
     dolphin: bool,
 ) -> String {
-    todo!()
+    match shark_distance
+        / (if dolphin {
+            shark_speed / 2.0
+        } else {
+            shark_speed
+        })
+        > pontoon_distance / you_speed
+    {
+        true => "Alive!".to_string(),
+        false => "Shark Bait!".to_string(),
+    }
 }
 
 #[cfg(test)]
