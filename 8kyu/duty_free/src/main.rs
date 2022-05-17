@@ -14,3 +14,6 @@ mod tests {
         assert_eq!(duty_free(17, 10, 500), 294);
     }
 }
+fn duty_free(price: i32, discount: i32, holiday_cost: i32) -> i32 {
+    holiday_cost * 100 / (price * discount)
+}
