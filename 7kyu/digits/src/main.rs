@@ -15,6 +15,15 @@ fn digits(n: u64) -> usize {
     digits
 }
 
+// fn digits(mut n: u64) -> usize {
+//     let mut l = 1;
+//     while n >= 10 {
+//         n /= 10;
+//         l += 1;
+//     }
+//     l
+// }
+
 #[test]
 fn sample_test() {
     assert_eq!(digits(5), 1);
